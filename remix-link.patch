@@ -1,0 +1,9 @@
+--- remix-0.2.4/src/libremix/Makefile.am.orig	2011-11-07 10:32:38.000000000 +0100
++++ remix-0.2.4/src/libremix/Makefile.am	2012-05-29 18:39:23.954901047 +0200
+@@ -36,5 +36,5 @@
+ 	remix_private.h \
+ 	remix_compat.h
+ 
+-libremix_la_LIBADD = @SNDFILE_LIBS@
++libremix_la_LIBADD = $(top_builddir)/src/ctxdata/libctxdata.la @SNDFILE_LIBS@ -ldl
+ 
